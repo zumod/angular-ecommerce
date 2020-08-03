@@ -1,3 +1,4 @@
+
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -56,13 +57,6 @@ input
 {
     color: black;
 }
-.container2
-{
-    height:150px;
-    width:100%;
-    margin-left: 0rem;
-    margin-right: 0rem;  
-}
 
 a
 {
@@ -82,7 +76,7 @@ a
 }
 .footlink
 {
-    background-color:rgb(148, 0, 0);
+    background-color:darkred;
 }
 .mb-0 {
     text-align: center;
@@ -91,3 +85,5 @@ a
 .btn  button {
     color:white;
 }
+
+
