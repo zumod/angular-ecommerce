@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kingsmart"
+    }
+  },
+  "defaultProject": "kingsmart",
+  "cli": {
+    "analytics": false
+  }
 }
