@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { OtpPageComponent } from './otp-page/otp-page.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { OtpPageComponent } from './otp-page/otp-page.component';
     HeaderComponent,
     FooterComponent,
     SignupComponent,
-    OtpPageComponent
+    OtpPageComponent,
+    AdminComponent,
+    AdminpanelComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,6 @@ import { OtpPageComponent } from './otp-page/otp-page.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AdminpanelComponent]
 })
 export class AppModule { }

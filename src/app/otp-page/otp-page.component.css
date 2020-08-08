@@ -32,6 +32,12 @@ border-top-right-radius:20px ;
 border-bottom-right-radius: 20px;
 padding-left:10px;
 }
+.logindiv
+{
+    width:55%;
+    border:rgb(221, 217, 217) solid 1px;
+    border-radius: 5px;
+}
 p{
     font-size:12px;
    
