@@ -1,37 +1,43 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
-
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { OtpPageComponent } from './otp-page/otp-page.component';
-import { AdminComponent } from './admin/admin.component';
-import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+import { CartComponent } from './cart/cart.component';
+
+
 
 
 @NgModule({
   declarations: [
+    CartComponent,
     AppComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,
     SignupComponent,
     OtpPageComponent,
-    AdminComponent,
-    AdminpanelComponent
+    DashboardComponent
+
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    AppRoutingModule
+    HttpClientModule,
+    ReactiveFormsModule
+
+    
   ],
   providers: [],
-  bootstrap: [AdminpanelComponent]
+  bootstrap: [ AppComponent]
 })
 export class AppModule { }
+

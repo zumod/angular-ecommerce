@@ -10,36 +10,36 @@
         
     <div class="container pb-4 pt-3 logindiv" >
           <h3 >Create Account</h3><br>
-          <form > 
+          <form  [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" > 
 
             <div class="form-group">
               <label for="firstname">Your Name</label>
-              <input type="text" class="form-control" id="firstname" placeholder="Enter your Name">
+              <input type="text" class="form-control input-sm" id="firstname" placeholder="Enter your Name">
          </div>
 
          <div class="form-group">
           <label for="email">Mobile Number</label>
-          <input type="text" class="form-control" id="Mobile Number" aria-describedby="numberHelp" placeholder="Enter Mobile Number">
+          <input type="text" class="form-control input-sm" id="Mobile Number" aria-describedby="numberHelp" placeholder="Enter Mobile Number">
     
      </div>
 
             <div class="form-group">
                  <label for="email">Email</label>
-                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                 <input type="email" class="form-control input-sm" id="email" aria-describedby="emailHelp" placeholder="Enter email">
            
             </div>
            
  
             <div class="form-group ">
                <label for="Password" >Password</label>
-                <input type="password" class="form-control" id="Password" placeholder="Password">
+                <input type="password" class="form-control input-sm" id="Password" placeholder="Password">
                 <small id="passwordHelpBlock" class="form-text text-muted">
                   Your password must be 8-20 characters long, contain letters and numbers.</small>
                   </div>
  
             <div class="form-group ">
                <label for="confirmPassword" > Confirm Password</label>
-               <input type="password" class="form-control" id="confirmPassword" placeholder="confirmPassword">    
+               <input type="password" class="form-control input-sm" id="confirmPassword" placeholder="confirmPassword">    
              </div>
          
             
