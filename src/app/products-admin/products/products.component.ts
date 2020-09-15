@@ -1,115 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
+import { Products } from '../../models/products';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  constructor() {}
-  heroes: item[] = [
-    {
-      id: 11,
-      name: 'tiger',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 12,
-      name: 'Narco',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
+  constructor(private productsService: ProductsService) {}
+  heroes: Products[] = [];
 
-    {
-      id: 13,
-      name: 'Bombasto',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 14,
-      name: 'Celeritas',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 12,
-      name: 'Narco',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 13,
-      name: 'Bombasto',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 14,
-      name: 'Celeritas',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 12,
-      name: 'Narco',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 13,
-      name: 'Bombasto',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 14,
-      name: 'Celeritas',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-    {
-      id: 12,
-      name: 'Narco',
-      price: 45,
-      category: 'cookies',
-      discountPrice: 43,
-      description: 'offer',
-    },
-  ];
+  selectedHero: Products;
 
-  selectedHero: item;
-
-  ngOnInit(): void {}
-  onSelect(hero: item): void {
+  ngOnInit(): void {
+    this.productsService.getProducts().subscribe((pdts) => {
+      this.heroes = pdts;
+    });
+  }
+  onSelect(hero: Products): void {
     this.selectedHero = hero;
   }
-}
-interface item {
-  id: number;
-  name: string;
-  price: number;
-  category: string;
-  discountPrice: number;
-  description: string;
 }

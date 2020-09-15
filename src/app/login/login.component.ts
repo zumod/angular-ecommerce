@@ -19,9 +19,9 @@ password: ['', Validators.required]
 }
 ngOnInit() {
 }
-postdata(angForm1)
+postdata(angForm)
 {
-this.apiService.userlogin(angForm1.value.mobile,angForm1.value.password)
+this.apiService.userlogin(angForm.value.mobile,angForm.value.password)
 .pipe(first())
 .subscribe(
 data => {

@@ -1,5 +1,3 @@
-
-
 import { Component} from '@angular/core';
 import { ApiService } from './api.service';
 @Component({
@@ -34,4 +32,3 @@ this.apiService.deleteToken();
 window.location.href = window.location.href;
 }
 }
-

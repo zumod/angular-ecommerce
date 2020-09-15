@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -11,9 +11,8 @@ import { SignupComponent } from './signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { OtpPageComponent } from './otp-page/otp-page.component';
 import { CartComponent } from './cart/cart.component';
-
-
-
+import { ProductsComponent } from './products-admin/products/products.component';
+import { AdditmComponent } from './products-admin/additm/additm.component';
 
 @NgModule({
   declarations: [
@@ -24,20 +23,18 @@ import { CartComponent } from './cart/cart.component';
     FooterComponent,
     SignupComponent,
     OtpPageComponent,
-    DashboardComponent
-
+    DashboardComponent,
+    ProductsComponent,
+    AdditmComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
-
-    
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [ AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}
